@@ -19,7 +19,20 @@ void Menu()
     if (time == 0)
         System.Environment.Exit(0);
 
-    Start(time * multiplier);
+    PreStart(time * multiplier);
+}
+
+void PreStart(int time)
+{
+    Console.Clear();
+    Console.WriteLine("Ready...");
+    Thread.Sleep(1000);
+    Console.WriteLine("Set...");
+    Thread.Sleep(1000);
+    Console.WriteLine("Go!");
+    Thread.Sleep(2500);
+
+    Start(time);
 }
 
 void Start(int time)
