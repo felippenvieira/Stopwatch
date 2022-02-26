@@ -1,4 +1,4 @@
-﻿Start(6);
+﻿Menu();
 
 void Menu()
 {
@@ -9,7 +9,8 @@ void Menu()
     Console.WriteLine("How long do you want to count?");
 
     string data = Console.ReadLine().ToLower();
-
+    char type = char.Parse(data.Substring(data.Length - 1, 1));
+    Console.WriteLine(type);
 }
 
 void Start(int time)
